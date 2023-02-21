@@ -19,5 +19,13 @@ from . import view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', view.home)
+    path('', view.home),
+    path('index/', view.index),
+    path('shop-grid/', view.shop_grid),
+    path('blog/', view.blog),
+    path('contact/', view.contact),
+    path('blog-details/', view.blog_details),
+    path('checkout/', view.checkout),
+    path('shop-details/', view.shop_details),
+    path('shoping-cart/', view.shoping_cart)
 ]
