@@ -1,4 +1,4 @@
-"""ogani_master_django URL Configuration
+"""core URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.1/topics/http/urls/
@@ -14,18 +14,10 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from . import view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', view.home),
-    path('index/', view.index),
-    path('shop-grid/', view.shop_grid),
-    path('blog/', view.blog),
-    path('contact/', view.contact),
-    path('blog-details/', view.blog_details),
-    path('checkout/', view.checkout),
-    path('shop-details/', view.shop_details),
-    path('shoping-cart/', view.shoping_cart)
+    path('', include('apps.urls'))
 ]
