@@ -2,4 +2,7 @@ from django.shortcuts import render
 
 
 def index(request):
-    return render(request, 'base.html')
+    context = {
+        "a": 1
+    }
+    return render(request, 'pages/main.html', context=context)
