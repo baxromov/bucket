@@ -6,8 +6,7 @@ from apps.views.contact import index as contact
 
 urlpatterns = [
     path('', index, name='home'),
-    path('shop', shop, name='shop'),
-    path('blog', blog, name='blog'),
-    path('contact', contact, name='contact'),
-
+    path('shop/', shop, name='shop'),
+    path('blog/', blog, name='blog'),
+    path('contact/', contact, name='contact'),
 ]

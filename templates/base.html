@@ -153,7 +153,7 @@
 <!-- Header Section End -->
 
     <!-- Hero Section Begin -->
-    <section class="hero {% if request.path == '/shop' or request.path == '/blog' or request.path == '/contact' %} hero-normal {% else %} {% endif %}">
+    <section class="hero {% if request.path == '/shop/' or request.path == '/blog/' or request.path == '/contact/' %} hero-normal {% else %} {% endif %}">
         <div class="container">
             <div class="row">
                 <div class="col-lg-3">
@@ -163,17 +163,19 @@
                             <span>All departments</span>
                         </div>
                         <ul>
-                            <li><a href="#">Fresh Meat</a></li>
-                            <li><a href="#">Vegetables</a></li>
-                            <li><a href="#">Fruit & Nut Gifts</a></li>
-                            <li><a href="#">Fresh Berries</a></li>
-                            <li><a href="#">Ocean Foods</a></li>
-                            <li><a href="#">Butter & Eggs</a></li>
-                            <li><a href="#">Fastfood</a></li>
-                            <li><a href="#">Fresh Onion</a></li>
-                            <li><a href="#">Papayaya & Crisps</a></li>
-                            <li><a href="#">Oatmeal</a></li>
-                            <li><a href="#">Fresh Bananas</a></li>
+                            {% for i in departments %}
+                            <li><a href="#">{{ i.title }}</a></li>
+{#                            <li><a href="#">Vegetables</a></li>#}
+{#                            <li><a href="#">Fruit & Nut Gifts</a></li>#}
+{#                            <li><a href="#">Fresh Berries</a></li>#}
+{#                            <li><a href="#">Ocean Foods</a></li>#}
+{#                            <li><a href="#">Butter & Eggs</a></li>#}
+{#                            <li><a href="#">Fastfood</a></li>#}
+{#                            <li><a href="#">Fresh Onion</a></li>#}
+{#                            <li><a href="#">Papayaya & Crisps</a></li>#}
+{#                            <li><a href="#">Oatmeal</a></li>#}
+{#                            <li><a href="#">Fresh Bananas</a></li>#}
+                            {% endfor %}
                         </ul>
                     </div>
                 </div>
@@ -199,7 +201,7 @@
                             </div>
                         </div>
                     </div>
-                    {% if request.path == '/shop' or request.path == '/blog' or request.path == '/contact' %}
+                    {% if request.path == '/shop/' or request.path == '/blog/' or request.path == '/contact/' %}
                     {% else %}
                         <div class="hero__item set-bg" data-setbg="{% static 'img/hero/banner.jpg' %}">
                         <div class="hero__text">
